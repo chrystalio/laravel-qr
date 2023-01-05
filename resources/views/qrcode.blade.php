@@ -7,22 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="container mt-4">
-    <div class="card">
-        <div class="card-header">
-            <h2>Simple QR Code</h2>
-        </div>
-        <div class="card-body">
-            {!! QrCode::size(300)->generate('RemoteStack') !!}
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <h2>Color QR Code</h2>
-        </div>
-        <div class="card-body">
-            {!! QrCode::size(300)->backgroundColor(255,90,0)->generate('RemoteStack') !!}
-        </div>
+<h3 class="text-center my-5 pt-5">Simple QR code generator</h3>
+<div class="container-fluid text-center d-flex justify-content-center my-5 py-3">
+    <div class="py-5" style="width: 18rem;">
+        <span>{!! QrCode::size(180)->generate('https://kristoff.my.id') !!}</span>
+            <div class="form-group my-5">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate</button>
+        </form>
     </div>
 </div>
 </body>
