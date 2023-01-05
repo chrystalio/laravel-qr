@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/generate-qrcode', [QrCodeController::class, 'index']);
+Route::get('/', [QrCodeController::class, 'index']);
